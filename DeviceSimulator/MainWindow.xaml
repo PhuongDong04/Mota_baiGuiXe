@@ -1,0 +1,90 @@
+﻿<Window x:Class="DeviceSimulator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TẦNG 1 (EDGE LAYER): Giả lập Cảm biến &amp; Camera LPR" Height="560" Width="880"
+        WindowStartupLocation="CenterScreen" Background="#F4F6F9">
+    <Grid Margin="12">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="380"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- CỘT TRÁI: CẤU HÌNH & ĐIỀU KHIỂN -->
+        <StackPanel Grid.Column="0" Margin="0,0,12,0">
+            <!-- Khối 1: Kết nối MQTT -->
+            <GroupBox Header="1. Cấu hình MQTT Broker" FontWeight="Bold" Padding="8" Margin="0,0,0,10">
+                <StackPanel TextElement.FontWeight="Normal">
+                    <Grid Margin="0,0,0,6">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="80"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="60"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Broker IP:" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtBroker" Grid.Column="1" Text="broker.hivemq.com" Padding="4" Margin="0,0,6,0"/>
+                        <TextBox x:Name="txtPort" Grid.Column="2" Text="1883" Padding="4" TextAlignment="Center"/>
+                    </Grid>
+                    <Button x:Name="btnConnect" Content="Kết nối MQTT Broker" Background="#007BFF" Foreground="White" 
+                            FontWeight="Bold" Padding="6" Click="BtnConnect_Click"/>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Khối 2: Giả lập Cảm biến Siêu âm / Từ trường -->
+            <GroupBox Header="2. Giả lập Cảm biến Ô đỗ (Siêu âm/Từ trường)" FontWeight="Bold" Padding="8" Margin="0,0,0,10">
+                <StackPanel TextElement.FontWeight="Normal">
+                    <TextBlock Text="Chọn Ô đỗ / Cảm biến:" Margin="0,0,0,4"/>
+                    <ComboBox x:Name="cboSlots" SelectedIndex="0" Padding="4" Margin="0,0,0,8">
+                        <ComboBoxItem Content="SLOT_A1" Tag="SENSOR_A1"/>
+                        <ComboBoxItem Content="SLOT_A2" Tag="SENSOR_A2"/>
+                        <ComboBoxItem Content="SLOT_A3" Tag="SENSOR_A3"/>
+                        <ComboBoxItem Content="SLOT_B1" Tag="SENSOR_B1"/>
+                        <ComboBoxItem Content="SLOT_B2" Tag="SENSOR_B2"/>
+                        <ComboBoxItem Content="SLOT_B3" Tag="SENSOR_B3"/>
+                    </ComboBox>
+                    <UniformGrid Columns="2">
+                        <Button Content="Báo CÓ XE (1)" Background="#DC3545" Foreground="White" FontWeight="Bold" 
+                                Margin="0,0,4,0" Padding="6" Click="BtnSensorOccupied_Click"/>
+                        <Button Content="Báo TRỐNG (0)" Background="#28A745" Foreground="White" FontWeight="Bold" 
+                                Margin="4,0,0,0" Padding="6" Click="BtnSensorEmpty_Click"/>
+                    </UniformGrid>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Khối 3: Giả lập Camera LPR -->
+            <GroupBox Header="3. Giả lập Camera Nhận diện Biển số (LPR)" FontWeight="Bold" Padding="8" Margin="0,0,0,10">
+                <StackPanel TextElement.FontWeight="Normal">
+                    <Grid Margin="0,0,0,8">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="75"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="85"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Biển số xe:" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtPlate" Grid.Column="1" Text="30H-888.99" FontWeight="Bold" FontSize="14" Padding="4" Margin="0,0,6,0"/>
+                        <Button Grid.Column="2" Content="Random" Padding="4" Click="BtnRandomPlate_Click"/>
+                    </Grid>
+                    <UniformGrid Columns="2">
+                        <Button Content="Xe VÀO Cổng (IN)" Background="#17A2B8" Foreground="White" FontWeight="Bold" 
+                                Margin="0,0,4,0" Padding="6" Click="BtnGateIn_Click"/>
+                        <Button Content="Xe RA Cổng (OUT)" Background="#FD7E14" Foreground="White" FontWeight="Bold" 
+                                Margin="4,0,0,0" Padding="6" Click="BtnGateOut_Click"/>
+                    </UniformGrid>
+                </StackPanel>
+            </GroupBox>
+
+            <!-- Khối 4: Chế độ tự động -->
+            <GroupBox Header="4. Chế độ Gửi Tự động (Auto Simulation)" FontWeight="Bold" Padding="8">
+                <StackPanel TextElement.FontWeight="Normal">
+                    <Button x:Name="btnAuto" Content="Bắt đầu gửi tự động (5 giây/lần)" Background="#6F42C1" 
+                            Foreground="White" FontWeight="Bold" Padding="8" Click="BtnAuto_Click"/>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+
+        <!-- CỘT PHẢI: MÀN HÌNH LOG -->
+        <GroupBox Grid.Column="1" Header="Log Gói tin JSON đã Publish (Topic: parking/device/status)" FontWeight="Bold">
+            <TextBox x:Name="txtLog" Background="#1E1E1E" Foreground="#00FF7F" FontFamily="Consolas" FontSize="12"
+                     IsReadOnly="True" VerticalScrollBarVisibility="Auto" TextWrapping="Wrap" Padding="8"/>
+        </GroupBox>
+    </Grid>
+</Window>

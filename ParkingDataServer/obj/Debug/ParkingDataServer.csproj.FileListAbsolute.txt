@@ -1,0 +1,12 @@
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\ParkingDataServer.exe.config
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\ParkingDataServer.exe
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\ParkingDataServer.pdb
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\M2Mqtt.Net.dll
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\Newtonsoft.Json.dll
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\M2Mqtt.Net.pdb
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\bin\Debug\Newtonsoft.Json.xml
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\obj\Debug\ParkingDataServer.csproj.AssemblyReference.cache
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\obj\Debug\ParkingDataServer.csproj.CoreCompileInputs.cache
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\obj\Debug\ParkingD.256E83F1.Up2Date
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\obj\Debug\ParkingDataServer.exe
+A:\PMHUST\TKPM\SmartParkingSystem\ParkingDataServer\obj\Debug\ParkingDataServer.pdb

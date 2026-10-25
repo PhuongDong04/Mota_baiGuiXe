@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="DeviceSimulator/DeviceSimulator.csproj" Id="578ece75-b592-41cf-aff0-467ce9d1bf86" />
+  <Project Path="ParkingClientApp/ParkingClientApp.csproj" Id="33a0fa39-f6bf-43bf-bdf6-39d80d1818a7" />
+  <Project Path="ParkingDataServer/ParkingDataServer.csproj" Id="f895a8a8-9c07-4655-a9b6-a35410593735" />
+</Solution>

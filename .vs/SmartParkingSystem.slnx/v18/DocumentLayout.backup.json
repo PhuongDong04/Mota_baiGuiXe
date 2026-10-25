@@ -1,0 +1,68 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F895A8A8-9C07-4655-A9B6-A35410593735}|ParkingDataServer\\ParkingDataServer.csproj|A:\\PMHUST\\TKPM\\SmartParkingSystem\\parkingdataserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F895A8A8-9C07-4655-A9B6-A35410593735}|ParkingDataServer\\ParkingDataServer.csproj|solutionrelative:parkingdataserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A0FA39-F6BF-43BF-BDF6-39D80D1818A7}|ParkingClientApp\\ParkingClientApp.csproj|A:\\PMHUST\\TKPM\\SmartParkingSystem\\parkingclientapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{33A0FA39-F6BF-43BF-BDF6-39D80D1818A7}|ParkingClientApp\\ParkingClientApp.csproj|solutionrelative:parkingclientapp\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{33A0FA39-F6BF-43BF-BDF6-39D80D1818A7}|ParkingClientApp\\ParkingClientApp.csproj|A:\\PMHUST\\TKPM\\SmartParkingSystem\\parkingclientapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{33A0FA39-F6BF-43BF-BDF6-39D80D1818A7}|ParkingClientApp\\ParkingClientApp.csproj|solutionrelative:parkingclientapp\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingClientApp\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "ParkingClientApp\\MainWindow.xaml",
+              "ToolTip": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingClientApp\\MainWindow.xaml",
+              "RelativeToolTip": "ParkingClientApp\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-10-23T04:58:30.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingDataServer\\Program.cs",
+              "RelativeDocumentMoniker": "ParkingDataServer\\Program.cs",
+              "ToolTip": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingDataServer\\Program.cs",
+              "RelativeToolTip": "ParkingDataServer\\Program.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAwwOMAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T02:35:14.453Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingClientApp\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "ParkingClientApp\\MainWindow.xaml.cs",
+              "ToolTip": "A:\\PMHUST\\TKPM\\SmartParkingSystem\\ParkingClientApp\\MainWindow.xaml.cs",
+              "RelativeToolTip": "ParkingClientApp\\MainWindow.xaml.cs",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAowFMAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T04:59:53.862Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

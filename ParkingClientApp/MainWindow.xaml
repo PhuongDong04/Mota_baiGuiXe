@@ -1,0 +1,74 @@
+﻿<Window x:Class="ParkingClientApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="TẦNG 3 (APPLICATION LAYER): Phần mềm Quản lý &amp; Giám sát Bãi đỗ xe" Height="580" Width="950"
+        WindowStartupLocation="CenterScreen" Background="#F0F2F5">
+    <Grid Margin="14">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!-- HEADER THỐNG KÊ NHANH -->
+        <Border Grid.Row="0" Background="#1E293B" CornerRadius="6" Padding="15,0" Margin="0,0,0,12">
+            <Grid>
+                <TextBlock Text="HỆ THỐNG GIÁM SÁT BÃI ĐỖ XE THÔNG MINH (REAL-TIME)" Foreground="White" 
+                           FontSize="16" FontWeight="Bold" VerticalAlignment="Center"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" VerticalAlignment="Center">
+                    <TextBlock x:Name="lblSummary" Text="Trống: 6/6 | Xe đang gửi: 0" Foreground="#38BDF8" 
+                               FontSize="15" FontWeight="Bold" VerticalAlignment="Center" Margin="0,0,15,0"/>
+                    <Button Content="Làm mới qua API" Padding="10,5" Background="#10B981" Foreground="White" 
+                            FontWeight="Bold" Click="BtnRefresh_Click"/>
+                </StackPanel>
+            </Grid>
+        </Border>
+
+        <!-- NỘI DUNG CHÍNH: BẢN ĐỒ Ô ĐỖ & LỊCH SỬ LPR -->
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="420"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <!-- CỘT TRÁI: SƠ ĐỒ TRẠNG THÁI Ô ĐỖ (XANH / ĐỎ) -->
+            <GroupBox Grid.Column="0" Header="Sơ đồ Vị trí Đỗ xe (Cảm biến Siêu âm/Từ trường)" FontWeight="Bold" Margin="0,0,12,0">
+                <ItemsControl x:Name="icSlots" Margin="8">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <UniformGrid Columns="2"/>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Background="{Binding ColorHex}" CornerRadius="8" Margin="8" Padding="12">
+                                <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <TextBlock Text="{Binding SlotName}" Foreground="White" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding StatusText}" Foreground="White" FontSize="14" Margin="0,4,0,4" HorizontalAlignment="Center"/>
+                                    <!-- DÒNG THÊM MỚI: Hiển thị biển số xe -->
+                                    <TextBlock Text="{Binding PlateDisplay}" Foreground="#FFD700" FontSize="16" FontWeight="Bold" Margin="0,2,0,4" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding SensorId}" Foreground="#E2E8F0" FontSize="11" FontWeight="Normal" HorizontalAlignment="Center"/>
+                                    <TextBlock Text="{Binding UpdatedAt}" Foreground="#E2E8F0" FontSize="10" FontWeight="Normal" HorizontalAlignment="Center"/>
+                                </StackPanel>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </GroupBox>
+
+            <!-- CỘT PHẢI: DANH SÁCH XE RA VÀO TỪ CAMERA LPR -->
+            <GroupBox Grid.Column="1" Header="Nhật ký Nhận diện Biển số Tự động (Camera LPR)" FontWeight="Bold">
+                <DataGrid x:Name="dgLogs" AutoGenerateColumns="False" IsReadOnly="True" FontWeight="Normal" 
+                          RowHeight="30" AlternatingRowBackground="#F8FAFC" Margin="6">
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="45"/>
+                        <DataGridTextColumn Header="Biển số (LPR)" Binding="{Binding LicensePlate}" Width="110" FontWeight="Bold"/>
+                        <DataGridTextColumn Header="Giờ vào" Binding="{Binding TimeIn}" Width="135"/>
+                        <DataGridTextColumn Header="Giờ ra" Binding="{Binding TimeOut}" Width="135"/>
+                        <DataGridTextColumn Header="Phí (VNĐ)" Binding="{Binding Fee}" Width="80"/>
+                        <DataGridTextColumn Header="Trạng thái" Binding="{Binding StatusDisplay}" Width="*"/>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </GroupBox>
+        </Grid>
+    </Grid>
+</Window>

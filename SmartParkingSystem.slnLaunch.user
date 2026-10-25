@@ -1,0 +1,19 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "DeviceSimulator\\DeviceSimulator.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ParkingClientApp\\ParkingClientApp.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "ParkingDataServer\\ParkingDataServer.csproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]
